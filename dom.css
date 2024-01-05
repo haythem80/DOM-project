@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.title{
+    text-align: center;
+    color: brown;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 30px;
+    line-height: 30px;
+    margin-top:30px;
+}
+
+body{
+    background-image: url(./download.jfif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.table2{
+    text-align: center;
+    position:relative;
+    height:310px;
+    width:1100px;
+    box-shadow: 0 0 10px rgb(0,0,0,6);
+    margin-left: 190px;
+    
+}
+
+#photo1{
+    width: 150px;
+    height:120px;
+}
+
+#photo2{
+    width: 150px;
+    height:120px;
+}
+#photo3{
+    width: 150px;
+    height:120px;
+}
+#photo4{
+    width: 150px;
+    height:120px;
+}
+
+th{
+    width: 200px;
+}
+
+td{
+    border: 1px solid gray;
+}
+
+i{
+    width: 30px;
+    cursor: pointer;
+}
+
+.fa-trash-can:hover{
+    color:red;
+    transition:0.2s
+}
+
+p{
+    margin-left:5px ;
+    margin-right:5px ;
+}
+
+.btn-quantity{
+    display:flex;
+    justify-content: center;
+    margin-left: 50px;
+    height:45px;
+    width: 90px;
+    background-color:rgb(231, 225, 225); 
+    box-shadow: 0 0 10px rgb(0,0,0,6);
+    border-radius:35%;
+}
+
+button{
+    height:20px;
+    width: 20px;
+    margin-top: 15px;
+    border-radius: 50%; 
+    /* border-style:none; */
+    cursor: pointer;
+    background-color:rgb(227, 225, 225) ;
+}
+
+.plus:hover{
+background-color:rgb(130, 240, 130);
+transition: 0.1s;
+}
+
+.minus:hover{
+    background-color:rgb(243, 141, 141);
+    transition: 0.1s;
+    }
+
