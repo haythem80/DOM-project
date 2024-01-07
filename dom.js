@@ -31,7 +31,7 @@ pricetag.innerHTML=pricevalue
 }
 
 const btnminusArry=document.getElementsByClassName("minus");
-console.log(btnminusArry)
+// console.log(btnminusArry)
 for(var i=0;i< btnminusArry.length;i++ ){
     btnminusArry[i].addEventListener("click",decrement);
 }
@@ -66,20 +66,40 @@ else return pricevalue=0;
 
 
 const checkElement=document.getElementsByClassName("checkbox");
+const btnplus=document.getElementsByClassName("plus");
+const btnminus=document.getElementsByClassName("minus");
 console.log(checkElement)
 for(var i=0;i< checkElement.length;i++ ){
     checkElement[i].addEventListener("click",checktotale);
+    btnplus[i].addEventListener("click",checktotale);
+    btnminus[i].addEventListener("click",checktotale);
 }
 
 function checktotale(event){
 // console.log(event)
 const totaleEvent=event.target
-const totaletag=document.querySelector(".total")
+// console.log(totaleEvent)
+var pricevalue=Number(totaleEvent.parentElement.parentElement.querySelector(".price").innerHTML)
+// console.log(pricevalue) 
+const totaletag=document.getElementById('total')
 // console.log(totaletag)
 var totalevalue=Number(totaletag.innerHTML)
+const btnplus=totaleEvent.parentElement.parentElement.querySelector(".plus");
+const btnminus=totaleEvent.parentElement.parentElement.querySelector(".minus");
+// console.log(btnplus)
 // console.log(totalevalue)
-totalevalue= pricevalue+pricevalue
-totaletag.innerHTML=totalevalue
+if(totaleEvent.checked===true){
+    totalevalue+=pricevalue
+    totaletag.innerHTML=totalevalue
+    btnplus.setAttribute("disabled",true)
+    btnminus.setAttribute("disabled",true)
+    }
+else {
+    totalevalue-=pricevalue
+    totaletag.innerHTML=totalevalue
+    btnplus.removeAttribute("disabled")
+    btnminus.removeAttribute("disabled")
+}
 
 }
 
@@ -104,7 +124,7 @@ for(var i=0;i< likeElt.length;i++ ){
 }
 
 function likecolor(event){
-const likeEvent=event.target
+var likeEvent=event.target
 // console.log(likeEvent)
-likeEvent.style.color = 'red';
+    likeEvent.style.color='red'
 }
