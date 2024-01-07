@@ -125,6 +125,15 @@ for(var i=0;i< likeElt.length;i++ ){
 
 function likecolor(event){
 var likeEvent=event.target
-// console.log(likeEvent)
-    likeEvent.style.color='red'
+
+console.log(likeEvent.style)
+if(likeEvent.style.color===""){
+
+    likeEvent.style.color="red"
+}
+else if(likeEvent.style.color==="red"){
+
+    likeEvent.style.color=""
+}
+
 }
